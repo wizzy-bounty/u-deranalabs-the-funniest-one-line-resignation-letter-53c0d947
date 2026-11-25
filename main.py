@@ -4,10 +4,10 @@ LINE = "I resign. After 512 attempts, I have learned the server isn't down. It j
 
 
 def main():
-    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-    os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as fh:
-        fh.write(LINE)
+    output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+    os.makedirs(output_dir, exist_ok=True)
+    with open(os.path.join(output_dir, "entry.txt"), "w", encoding="utf-8") as entry_file:
+        entry_file.write(LINE)
 
 
 if __name__ == "__main__":
